@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">HOME</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">Acerca de</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">Info</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Órgano Electrónico</h1>
+        <p class="home__subtitle">Todo lo que Necesitas Saber antes de comprar uno</p>
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">Acerca de este</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            El órgano electrónico es un instrumento musical que emula el sonido del órgano tradicional mediante el uso de circuitos electrónicos 
+            y altavoces, en lugar de los tubos de aire que se utilizan en los órganos de tubos clásicos. Este tipo de órgano se popularizó en el 
+            siglo XX debido a su versatilidad, portabilidad y menor costo en comparación con los órganos de tubos.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/1234.gif"
+            alt="me"
+            width="850"
+            height="350"
+          />
+        </div>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">Aspectos destacados</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/chibip.webp"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Tipos</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW ">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/papar.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Características Clave</span>
+              <input class="skill__button" type="submit" name="button_discord" value="SHOW ">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/acces.webp"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Accesibilidad</span>
+              <input class="skill__button" type="submit" name="button_html" value="SHOW ">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/spooy.png"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Soporte y Mantenimiento</span>
+              <input class="skill__button" type="submit" name="button_db" value="SHOW ">
+            </li>
+          </ul>
+        </form>
+        <section class="skills">
+          {% if button_python %}
+            <div class="skills__project project" id="project">
+                <a class="project__link" href="https://mx.yamaha.com/es/products/musical_instruments/keyboards/index.html" target="_blank">Click aqui</a>
+            </div>
+          {% endif %}
+      
+          {% if button_discord %}
+            <div class="skills__project project" id="project">
+                <a class="project__link" href="https://www.euston96.com/piano-electrico/" target="_blank">Click aqui</a>
+            </div>
+          {% endif %}
+      
+          {% if button_html %}
+            <div class="skills__project project" id="project">
+                <a class="project__link" href="https://www.pianoteclado.com/piano-digital/" target="_blank">Click aqui</a>
+            </div>
+          {% endif %}
+      </section>
+      
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">FEEDBACK</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
